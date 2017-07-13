@@ -6,4 +6,8 @@ git config --global core.sshCommand '/ssh.sh'
 
 git config --list --global
 
-exec dep.bash "$@"
+dep.bash "$@"
+RETVAL=$?
+
+cat /workspace/sshout
+exit $RETVAL
